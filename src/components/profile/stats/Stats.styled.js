@@ -4,6 +4,7 @@ export const StatsList = styled.ul`
   display: flex;
   justify-content: space-between;
   background-color: #eeeeee;
+  border: 1px solid #999999;
 `;
 
 export const StatsItem = styled.li`
@@ -11,9 +12,11 @@ export const StatsItem = styled.li`
   flex-wrap: wrap;
   align-items: center;
   padding: 20px 20px;
-  flex-basis: 95px;
+  flex-basis: calc(100% / 3);
 
-  border: 1px solid #999999;
+  &:not(:last-child) {
+    border-right: 1px solid #999999;
+  }
 `;
 
 export const StatLabel = styled.span`
