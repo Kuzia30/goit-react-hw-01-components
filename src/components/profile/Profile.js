@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import Discription from './discription/Discription';
 import Stats from './stats/Stats';
+import { ProfileCard } from './Profile.styled';
 
 export default function Profile({ items }) {
   return (
-    <div class="profile">
+    <ProfileCard>
       <Discription
         avatar={items.avatar}
         userName={items.username}
@@ -15,6 +17,10 @@ export default function Profile({ items }) {
         views={items.stats.views}
         followers={items.stats.followers}
       />
-    </div>
+    </ProfileCard>
   );
 }
+
+Profile.propTypes = {
+  items: PropTypes.object,
+};
