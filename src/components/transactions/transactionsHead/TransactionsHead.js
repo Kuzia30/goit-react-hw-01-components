@@ -1,11 +1,12 @@
+import { Thead, Items } from './TransactionsHead.styled';
 export default function TransactionsHead() {
   return (
-    <thead>
+    <Thead>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <Items>Type</Items>
+        <Items>Amount</Items>
+        <Items>Currency</Items>
       </tr>
-    </thead>
+    </Thead>
   );
 }

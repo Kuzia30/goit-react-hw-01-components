@@ -1,13 +1,14 @@
 import propTypes from 'prop-types';
 import TransactionsHead from './transactionsHead/TransactionsHead';
 import TransactionsBody from './transactionsBody/TransactionsBody';
+import { Table } from './TransactionHistory.styled';
 
 export default function Transactions({ items }) {
   return (
-    <table class="transaction-history">
+    <Table>
       <TransactionsHead />
       <TransactionsBody items={items} />
-    </table>
+    </Table>
   );
 }
 
