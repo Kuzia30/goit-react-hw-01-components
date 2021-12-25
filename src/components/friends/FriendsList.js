@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import ItemTemplate from './itemTemplate/ItemTemplate';
+import { FriendsWrap } from './FriendsList.styled';
 
 export default function FriendsList({ friends }) {
   return (
-    <ul class="friend-list">
+    <FriendsWrap>
       {friends.map(friend => {
         return (
           <ItemTemplate
@@ -14,7 +15,7 @@ export default function FriendsList({ friends }) {
           ></ItemTemplate>
         );
       })}
-    </ul>
+    </FriendsWrap>
   );
 }
 

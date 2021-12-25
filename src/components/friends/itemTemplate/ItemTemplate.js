@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-
+import { FriendsItem, Status, Avatar, Name } from './ItemTemplate.styled';
 export default function ItemTemplate({ name, avatar, isOnline }) {
   return (
-    <li>
-      <span class="status">{isOnline ? 'A' : 'B'}</span>
-      <img class="avatar" src={avatar} alt={name} width="48" />
-      <p class="name">{name}</p>
-    </li>
+    <FriendsItem>
+      <Status isOnline={isOnline}></Status>
+      <Avatar src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
+    </FriendsItem>
   );
 }
 
