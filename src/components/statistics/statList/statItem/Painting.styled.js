@@ -18,3 +18,9 @@ export const Label = styled.span`
   line-height: 1.15;
   margin-bottom: 10px;
 `;
+
+export const Percentage = styled.span`
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+`;
