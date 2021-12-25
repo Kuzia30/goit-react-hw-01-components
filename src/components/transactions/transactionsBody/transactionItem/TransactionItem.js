@@ -1,12 +1,13 @@
 import propTypes from 'prop-types';
+import { TRow, Items } from './TransactionItem.styled';
 
 export default function TransactionItem({ currency, amount, type }) {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TRow>
+      <Items>{type}</Items>
+      <Items>{amount}</Items>
+      <Items>{currency}</Items>
+    </TRow>
   );
 }
 

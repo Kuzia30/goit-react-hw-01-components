@@ -1,10 +1,11 @@
 import propTypes from 'prop-types';
 
 import TransactionItem from './transactionItem/TransactionItem';
+import { TBody } from './TransactionsBody.styled';
 
 export default function TransactionsBody({ items }) {
   return (
-    <tbody>
+    <TBody>
       {items.map(item => (
         <TransactionItem
           key={item.id}
@@ -13,7 +14,7 @@ export default function TransactionsBody({ items }) {
           currency={item.currency}
         />
       ))}
-    </tbody>
+    </TBody>
   );
 }
 
