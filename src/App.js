@@ -8,7 +8,7 @@ export default function App() {
   return (
     <Container>
       <Profile items={user} />
-      <Statistics items={data} />
+      <Statistics stats={data} />
     </Container>
   );
 }

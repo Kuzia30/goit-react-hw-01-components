@@ -1,24 +1,21 @@
-const StatList = () => {
+import propTypes from 'prop-types';
+import StatItem from './statItem/Painting';
+
+const StatList = ({ stats }) => {
   return (
     <ul class="stat-list">
-      <li class="item">
-        <span class="label">.docx</span>
-        <span class="percentage">4%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp3</span>
-        <span class="percentage">14%</span>
-      </li>
-      <li class="item">
-        <span class="label">.pdf</span>
-        <span class="percentage">41%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp4</span>
-        <span class="percentage">12%</span>
-      </li>
+      {stats.map(stat => (
+        <StatItem
+          key={stat.id}
+          label={stat.label}
+          percentage={stat.percentage}
+        ></StatItem>
+      ))}
     </ul>
   );
 };
 
+StatList.propTypes = {
+  stats: propTypes.array,
+};
 export default StatList;
