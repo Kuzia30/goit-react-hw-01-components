@@ -1,9 +1,9 @@
 import propTypes from 'prop-types';
 import StatItem from './statItem/Painting';
-
+import { StatisticsList } from './StatList.styled';
 const StatList = ({ stats }) => {
   return (
-    <ul class="stat-list">
+    <StatisticsList>
       {stats.map(stat => (
         <StatItem
           key={stat.id}
@@ -11,7 +11,7 @@ const StatList = ({ stats }) => {
           percentage={stat.percentage}
         ></StatItem>
       ))}
-    </ul>
+    </StatisticsList>
   );
 };
 

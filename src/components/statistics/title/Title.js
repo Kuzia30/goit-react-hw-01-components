@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { Article } from './Title.styled';
 const Title = ({ title }) => {
-  return title && <h2>{title}</h2>;
+  return title && <Article>{title}</Article>;
 };
 
 Title.propTypes = {

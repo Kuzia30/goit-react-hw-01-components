@@ -1,11 +1,17 @@
+import propTypes from 'prop-types';
 import Title from './title/Title';
 import StatList from './statList/StatList';
+import { StatisticsSection } from './Statistics.styled';
 
 export default function Statistics({ stats }) {
   return (
-    <section class="statistics">
+    <StatisticsSection>
       <Title title="Upload stats" />
       <StatList stats={stats} />
-    </section>
+    </StatisticsSection>
   );
 }
+
+Statistics.propTypes = {
+  stats: propTypes.array,
+};

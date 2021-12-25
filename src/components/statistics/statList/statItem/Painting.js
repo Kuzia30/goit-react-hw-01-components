@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-
+import { StatisticsItem, Label } from './Painting.styled';
 const StatItem = ({ label, percentage }) => {
   return (
-    <li>
-      <span class="label">{label}</span>
+    <StatisticsItem>
+      <Label>{label}</Label>
       <span class="percentage">{percentage}%</span>
-    </li>
+    </StatisticsItem>
   );
 };
 
